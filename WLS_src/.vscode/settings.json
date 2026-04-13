@@ -1,0 +1,15 @@
+{
+  "java.project.referencedLibraries": [
+    "/home/jaydev/BE/Final-Project/apache-tomcat-8.5.5/lib/servlet-api.jar",
+    "/home/jaydev/BE/Final-Project/apache-tomcat-8.5.5/lib/jsp-api.jar",
+    "/home/jaydev/BE/Final-Project/apache-tomcat-8.5.5/lib/mysql-connector-java-8.4.0.jar"
+  ],
+  "java.jdt.ls.java.home": "/usr/lib/jvm/java-8-openjdk-amd64",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/usr/lib/jvm/java-8-openjdk-amd64",
+      "default": true
+    }
+  ]
+}
