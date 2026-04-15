@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import {
+  FaBars,
   FaBookOpen,
   FaBuilding,
   FaCogs,
   FaClipboardCheck,
   FaHome,
   FaShieldAlt,
+  FaTimes,
   FaUsers,
 } from "react-icons/fa";
 import { useAuth } from "../../context/useAuth";
@@ -53,7 +55,7 @@ export default function AdminLayout() {
               onClick={closeSidebar}
               aria-label="Close admin menu"
             >
-              Close
+              <FaTimes />
             </button>
           </div>
 
@@ -73,9 +75,11 @@ export default function AdminLayout() {
           </nav>
         </div>
 
-        <button type="button" className="admin-btn secondary admin-signout-btn" onClick={onSignOut}>
-          Sign Out
-        </button>
+        <div className="admin-sidebar-footer">
+          <button type="button" className="admin-btn-danger" onClick={onSignOut}>
+            Sign Out
+          </button>
+        </div>
       </aside>
 
       <div className="admin-content" onClick={closeSidebar}>
@@ -86,9 +90,10 @@ export default function AdminLayout() {
             onClick={() => setIsSidebarOpen(true)}
             aria-label="Open admin menu"
           >
-            Menu
+            <FaBars />
+            <span>Menu</span>
           </button>
-          <span className="admin-mobile-title">Admin</span>
+          <span className="admin-mobile-title">WLS Admin</span>
         </header>
 
         <main className="admin-main" onClick={(event) => event.stopPropagation()}>
